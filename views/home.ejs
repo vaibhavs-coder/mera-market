@@ -1,0 +1,28 @@
+<% layout('../partials/boilerplate.ejs') %>
+<center><h1>MiniPlix-Maze Karo</h1></center>
+<%- include('../partials/navbar.ejs') -%>
+<div id="flexa">
+    <% for(let i of p){ %>
+        <main>
+            <div class="container">
+              <div class="card rounded">
+                <div class="rounded image-container">
+                  <img src=<%=i.image %> width="256px" height="auto" />
+                  <div class="eye accent-text"><i class="fa-solid fa-eye"></i></div>
+                </div>
+                <h3 class="primary-text hover-text"><%= i.name %></h3>
+                <div id="flush">
+                   <h3><%=i.year %>
+                  </h3> <a href="/<%= i._id %>"><button>Watch Latest Episode</button></a> <a href="/<%=i._id %>/edit"><button>Edit</button></a>
+                   <a href="/<%= i._id %>/reviews"><button>Reviews</button></a>
+                   <form action="/<%=i._id%>?_method=DELETE" method="post">
+                    <button>Delete</button>
+                   </form>
+                </div>
+              </div>
+              </div>
+          </main>
+<% } %>
+</div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+.cf:before,
+  .cf:after {
+      content: " ";
+      display: table;
+  }
+
+  .cf:after {
+      clear: both;
+  }
+
+  .cf {
+      zoom: 1;
+  }
+
+  .menu,
+  .submenu {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+  }
+
+  .menu {   
+   margin: 50px auto;
+   width: 800px;   
+   width: -moz-fit-content;
+   width: -webkit-fit-content;
+   width: fit-content; 
+  }
+
+  .menu > li {
+   background-image:url('./wall.jpg');
+   float: left;
+   position: relative;
+   transform: skewX(25deg);
+  }
+  body{
+    background-image:url('./showbg.jpg');
+  }
+  h1{
+    color:#FD2B3B;
+  }
+
+  .menu a {
+   display: block;
+   color: #fff;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-family: Arial, Helvetica;
+   font-size: 14px;
+  }  
+
+  .menu li:hover {
+   background: #FD2B3B;
+  }  
+
+  .menu > li > a {
+   transform: skewX(-25deg);
+   padding: 1em 2em;
+  }
+
+  /* Dropdown */
+  .submenu {
+   position: absolute;
+   width: 200px;
+   left: 50%; margin-left: -100px;
+   transform: skewX(-25deg);
+   transform-origin: left top;
+  }
+
+  .submenu li {
+   background-color: #34495e;
+   position: relative;
+   overflow: hidden;  
+  }      
+
+  .submenu > li > a {
+   padding: 1em 2em;   
+  }
+
+  .submenu > li::after {
+   content: '';
+   position: absolute;
+   top: -125%;
+   height: 100%;
+   width: 100%;   
+   box-shadow: 0 0 50px rgba(0, 0, 0, .9);   
+  }  
+
+  .submenu > li:nth-child(odd){
+   transform: skewX(-25deg) translateX(0);
+  }
+
+  .submenu > li:nth-child(odd) > a {
+   transform: skewX(25deg);
+  }
+
+  .submenu > li:nth-child(odd)::after {
+   right: -50%;
+   transform: skewX(-25deg) rotate(3deg);
+  }    
+
+  .submenu > li:nth-child(even){
+   transform: skewX(25deg) translateX(0);
+  }
+
+  .submenu > li:nth-child(even) > a {
+   transform: skewX(-25deg);
+  }
+
+  .submenu > li:nth-child(even)::after {
+   left: -50%;
+   transform: skewX(25deg) rotate(3deg);
+  }
+
+  /* Show dropdown */
+  .submenu,
+  .submenu li {
+   opacity: 0;
+   visibility: hidden;   
+  }
+
+  .submenu li {
+   transition: .2s ease transform;
+  }
+
+  .menu > li:hover .submenu,
+  .menu > li:hover .submenu li {
+   opacity: 1;
+   visibility: visible;
+  }  
+
+  .menu > li:hover .submenu li:nth-child(even){
+   transform: skewX(25deg) translateX(15px);   
+  }
+
+  .menu > li:hover .submenu li:nth-child(odd){
+   transform: skewX(-25deg) translateX(-15px);   
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .primary-text {
+    color: rgba(252, 240, 18, 0.847);
+  }
+  
+  .secondary-text {
+    color: #b4b4b4;
+  }
+  
+  .accent-text {
+    color: #2cc;
+  }
+  
+  .hover-text:hover {
+    cursor: pointer;
+    color: #2cc;
+  }
+  
+  .container {
+    width: fit-content;
+    margin: 0px auto;
+    padding-top: 16px;
+  }
+  
+  .card {
+    margin-top: 16px;
+    background-image:url('./wall1.jpg');
+    padding: 16px;
+    word-break: break-word;
+    width:450px;
+    height:360px;
+  }
+  
+  .rounded {
+    border-radius: 16px;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .image-container img {
+    border-radius: 8px;
+    backface-visibility: hidden;
+    height:200px;
+    width:420px;
+  }
+  
+  .image-container img:hover {
+    cursor: pointer;
+    opacity: 0.3;
+    transition: ease-in 200ms;
+    background-color: #2cc;
+  }
+  
+  .image-container img:hover .eye {
+    opacity: 1;
+  }
+  
+  .sale span {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .sale {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #b4b4b4;
+    margin: 16px auto;
+  }
+  
+  .author img {
+    border-radius: 100%;
+  }
+  
+  .author {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .eye {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  #flexa{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);;
+
+  }
+  #flush{
+ 
+  }
+  h3{
+    color:white;
+  }
+  #flush button{
+    margin-left:20px;
+  }
+  #hn{
+    margin-left:600px;
+  }
+#iid{
+    width:350px;
+}
+#show{
+  background-image:url('./showbg.jpg');
+}
+#hoo{
+  color:blue;
+}

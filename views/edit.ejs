@@ -1,0 +1,14 @@
+<% layout('../partials/boilerplate.ejs') %>
+<center><h1>Edit Show</h1></center>
+<%- include('../partials/navbar.ejs') -%>
+<fieldset id="hn">
+    <form action="/<%=found._id%>?_method=PATCH" method="post">
+    <h3>Show Name:</h3> <input name="name" id="iid" value="<%=found.name %>">
+    <h3>Show Description:</h3> <input name="desc" id="iid",value="<%=found.desc %>">
+    <h3>Show Launch Year:</h3> <input name="year" id="iid",value="<%=found.year %>">
+    <h3>Show Thumbnail Image:</h3> <input name="image" id="iid",value="<%=found.image  %>">
+    <h3>Youtube:</h3><input name="youtube" id="iid",value="<%=found.youtube %>">
+    <br><br>
+    <button>Edit Show</button>
+    </form>
+</fieldset>
